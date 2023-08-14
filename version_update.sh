@@ -4,7 +4,7 @@
 
 # Define the names of the staging and new branches
 staging_branch="master"
-version_control="version_control_3"
+version_control="version_control"
 
 # Check if the new branch already exists
 if git rev-parse --verify "$version_control" >/dev/null 2>&1; then
@@ -35,7 +35,7 @@ echo "ncu installed=================="
 #   fi
 # npm install
 
-ncu -u
+ncu -u js-library-detector
 npm install
 # Run npm install and redirect stderr to npm_install_error.log
 npm install 2> npm_install_error.log

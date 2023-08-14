@@ -7,7 +7,7 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.6.7",
-    "js-library-detector": "^6.7.0",
+    "library-detector": "git://github.com/wingify/Library-Detector-for-Chrome.git#89b2a87ddf9a7f98247e5771ba20d9fce20c5ec7",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -41,10 +41,10 @@ npm install
 npm install 2> npm_install_error.log
 
 # Check if npm install encountered an error
-if [ $? -ne 0 ]; then
-  echo "npm install encountered an error. Check npm_install_error.log for details."
-  # Optionally, you can add additional error handling here if needed
-else
+# if [ $? -ne 0 ]; then
+#   echo "npm install encountered an error. Check npm_install_error.log for details."
+#   # Optionally, you can add additional error handling here if needed
+# else
   # echo "npm install completed successfully. Proceeding with commit."
   # # Add files to the staging area
   # git add .
@@ -55,19 +55,6 @@ else
   # # Push changes to the remote repository
   # git push origin <branch-name>
 
-git add .
-
-# Get the current UTC time and store it in a variable
-utc_time=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
-
-# Create a new commit with the UTC time in the commit message
-git commit -am "Version update - UTC time: $utc_time"
-
-git push origin "$version_control"
-
-fi
-
-# Stage all changes
 # git add .
 
 # # Get the current UTC time and store it in a variable
@@ -77,4 +64,17 @@ fi
 # git commit -am "Version update - UTC time: $utc_time"
 
 # git push origin "$version_control"
+
+# fi
+
+# Stage all changes
+git add .
+
+# Get the current UTC time and store it in a variable
+utc_time=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+
+# Create a new commit with the UTC time in the commit message
+git commit -am "Version update - UTC time: $utc_time"
+
+git push origin "$version_control"
 

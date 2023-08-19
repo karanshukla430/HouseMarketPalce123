@@ -38,7 +38,7 @@ else
         echo "package.json updated and changes pushed to branch '$NEW_BRANCH_NAME'."
 
         # # Create pull request
-        GITHUB_TOKEN="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"
+        GITHUB_TOKEN="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"
 
         # Set pull request title and description
         PR_TITLE="For Updating Version $DATE_TIME"

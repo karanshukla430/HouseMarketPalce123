@@ -41,7 +41,7 @@ else
         GITHUB_TOKEN="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"
 
         # Set pull request title and description
-        PR_TITLE="For Updating Version"
+        PR_TITLE="For Updating Version $DATE_TIME"
         PR_DESCRIPTION="This pull request updates the version."
 
         # Set your GitHub username and repository name
@@ -59,6 +59,8 @@ else
                 "body": "'"$PR_DESCRIPTION"'"
             }'
     else
+        git checkout master
+        git branch -D $NEW_BRANCH_NAME
         echo "No changes detected. Pull request will not be created."
     fi
 fi

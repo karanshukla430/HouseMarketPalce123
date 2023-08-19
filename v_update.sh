@@ -38,7 +38,7 @@ else
         echo "package.json updated and changes pushed to branch '$NEW_BRANCH_NAME'."
 
         # # Create pull request
-        GITHUB_TOKEN="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"
+        GITHUB_TOKEN1="$GITHUB_TOKEN"
 
         # Set pull request title and description
         PR_TITLE="For Updating Version $DATE_TIME"
@@ -50,7 +50,7 @@ else
 
         # Make the API request to create the pull request
         curl -X POST "https://api.github.com/repos/$USERNAME/$REPO_NAME/pulls" \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Authorization: Bearer $GITHUB_TOKEN1" \
             -H "Content-Type: application/json" \
             -d '{
                 "title": "'"$PR_TITLE"'",

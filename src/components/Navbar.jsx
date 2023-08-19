@@ -6,6 +6,10 @@ import { ReactComponent as PersonOutlineIcon } from "../assets/svg/personOutline
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  // Hurray maza aa gya
+  // Hurray maza aa gya
+  // Hurray maza aa gya
+  // Hurray maza aa gya
 
   const pathMatchRoute = (route) => {
     if (route === location.pathname) {

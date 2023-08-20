@@ -21,4 +21,4 @@ jobs:
         title: Automated Pull Request
         body: This pull request was automatically generated.
         branch: master
-        base: ${{ github.ref }}
+        base: version_update/*

@@ -10,8 +10,8 @@ DATE_TIME=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # Create the new branch name with date and time
 BASE_BRANCH="master"
-NEW_BRANCH_NAME="${BRANCH_NAME}_${DATE_TIME}"
-# NEW_BRANCH_NAME="$BRANCH_NAME"
+# NEW_BRANCH_NAME="${BRANCH_NAME}_${DATE_TIME}"
+NEW_BRANCH_NAME="$BRANCH_NAME"
 
 # Check if the branch already exists
 if git rev-parse --verify "$NEW_BRANCH_NAME" >/dev/null 2>&1; then

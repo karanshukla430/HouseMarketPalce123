@@ -10,7 +10,8 @@ DATE_TIME=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # Create the new branch name with date and time
 BASE_BRANCH="master"
-NEW_BRANCH_NAME="${BRANCH_NAME}_${DATE_TIME}"
+# NEW_BRANCH_NAME="${BRANCH_NAME}_${DATE_TIME}"
+NEW_BRANCH_NAME="$BRANCH_NAME"
 
 # Check if the branch already exists
 if git rev-parse --verify "$NEW_BRANCH_NAME" >/dev/null 2>&1; then
@@ -38,7 +39,7 @@ else
         echo "package.json updated and changes pushed to branch '$NEW_BRANCH_NAME'."
 
         # # Create pull request
-        GITHUB_TOKEN="$AUTHENTICATE_TOKEN"
+        # GITHUB_TOKEN="$AUTHENTICATE_TOKEN"
 
         # Set pull request title and description
         PR_TITLE="For Updating Version $DATE_TIME"
@@ -50,7 +51,7 @@ else
 
         # Make the API request to create the pull request
         curl -X POST "https://api.github.com/repos/$USERNAME/$REPO_NAME/pulls" \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Authorization: Bearer $AUTH_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{
                 "title": "'"$PR_TITLE"'",

@@ -1,0 +1,27 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - version_update
+
+jobs:
+  create_pull_request:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run script
+      run: bash /c/Users/HP/Desktop/HouseMarketPalce123/v_update.sh
+      env:
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}

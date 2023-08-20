@@ -3,7 +3,7 @@ name: Automated Pull Request
 on:
   push:
     branches:
-      - 'version_update/*'
+      - version_update/*
 
 jobs:
   create-pull-request:

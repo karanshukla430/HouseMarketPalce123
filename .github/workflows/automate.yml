@@ -1,0 +1,24 @@
+name: Automated Pull Request
+
+on:
+  push:
+    branches:
+      - version_update
+
+jobs:
+  create-pull-request:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Create pull request
+      uses: karanshukla430/HouseMarketPalce123@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: Automated Pull Request
+        title: Automated Pull Request
+        body: This pull request was automatically generated.
+        branch: master
+        base: version_control

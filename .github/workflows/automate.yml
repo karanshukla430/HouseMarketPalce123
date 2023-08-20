@@ -3,7 +3,7 @@ name: Automated Pull Request
 on:
   push:
     branches:
-      - version_update_1
+      - version_update_2
 
 jobs:
   create-pull-request:
@@ -14,11 +14,11 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Create pull request
-      uses: karanshukla430/HouseMarketPalce123@v3
+      uses: karanshukla430/HouseMarketPalce123@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: Automated Pull Request
         title: Automated Pull Request
         body: This pull request was automatically generated.
         branch: master
-        base: version_update_1
+        base: version_update_2

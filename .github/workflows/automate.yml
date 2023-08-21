@@ -20,5 +20,5 @@ jobs:
         commit-message: Automated Pull Request
         title: Automated Pull Request
         body: This pull request was automatically generated.
-        branch: version_update_2
-        base: master
+        branch: master
+        base: version_update_2
